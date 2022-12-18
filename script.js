@@ -2,20 +2,6 @@
 // I tried my best to make the code as simple as possible please dont mind the variable names.
 // Also this idea came in my mind after checking Traversy Media's latest video.
 
-// 自适应
-(function (doc, win) {
-  var docEl = doc.documentElement,
-    resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
-    recalc = function () {
-      var clientHeight = docEl.clientHeight;
-      if (!clientHeight) return;
-      docEl.style.fontSize = 10 * (clientHeight / 604) + "px";
-    };
-  if (!doc.addEventListener) return;
-  win.addEventListener(resizeEvt, recalc, false);
-  doc.addEventListener("DOMContentLoaded", recalc, false);
-})(document, window);
-
 // Clear the concole on every refresh
 console.clear();
 
