@@ -1,4 +1,4 @@
-import { runScript, browserAction } from "./share/tool";
+import { runScript, browserAction, windowResize } from "./share/tool";
 
 document.querySelector("head").innerHTML = `
     ${document.querySelector("head").innerHTML}
@@ -54,6 +54,7 @@ window.addEventListener("load", function () {
   }, Promise.resolve());
 
   browserAction();
+  windowResize();
 });
 
 window.addEventListener("resize", function () {

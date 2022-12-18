@@ -61,4 +61,21 @@ const browserAction = () => {
   }
 };
 
-export { runScript, browserAction };
+const windowResize = () => {
+  const win = window;
+  const doc = document;
+  const docEl = doc.documentElement,
+    resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
+    recalc = function () {
+      var clientHeight = docEl.clientHeight;
+      if (!clientHeight) return;
+      docEl.style.fontSize = 10 * (clientHeight / 604) + "px";
+    };
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener("DOMContentLoaded", recalc, false);
+
+  recalc();
+};
+
+export { runScript, browserAction, windowResize };
