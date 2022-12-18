@@ -42,4 +42,4 @@
 <button class="btn generate" id="generate">\u751F\u6210\u5BC6\u7801</button>
 
 <script src="./script.js"><\/script>
-`;window.addEventListener("load",function(){const i=document.querySelector("#app").querySelectorAll("script");Array.prototype.slice.apply(i).reduce((n,s)=>n.then(()=>u(s)),Promise.resolve()),d(),p()});window.addEventListener("resize",function(){d()});
+`;window.addEventListener("load",function(){d(),p();const i=document.querySelector("#app").querySelectorAll("script");Array.prototype.slice.apply(i).reduce((n,s)=>n.then(()=>u(s)),Promise.resolve())});window.addEventListener("resize",function(){d()});
