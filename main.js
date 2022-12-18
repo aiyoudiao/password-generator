@@ -48,13 +48,12 @@ document.querySelector("#app").innerHTML = `
 `;
 
 window.addEventListener("load", function () {
+  browserAction();
+  windowResize();
   const scripts = document.querySelector("#app").querySelectorAll("script");
   Array.prototype.slice.apply(scripts).reduce((chain, script) => {
     return chain.then(() => runScript(script));
   }, Promise.resolve());
-
-  browserAction();
-  windowResize();
 });
 
 window.addEventListener("resize", function () {

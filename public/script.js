@@ -122,7 +122,7 @@ window.addEventListener("load", () => {
 
 resultEl.addEventListener("click", () => {
   const password = resultEl.innerText;
-  if (!password || password == "请点击生成密码") {
+  if (password == "请点击生成密码") {
     generateBtn.click();
     resultContainer.click();
   }
@@ -136,6 +136,7 @@ copyBtn.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
   const password = resultEl.innerText;
   if (!password || password == "请点击生成密码") {
+    resultEl.click();
     return;
   }
   textarea.value = password;
