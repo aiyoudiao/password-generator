@@ -25,7 +25,6 @@ button {
   box-shadow: 0 0 0.4166666666666667rem rgba(0, 0, 0, 0.45),
     0 0.3333333333333333rem 0.6666666666666666rem rgba(0, 0, 0, 0.35),
     0 0.6666666666666666rem 1rem rgba(0, 0, 0, 0.15);
-  /* font-family: "Montserrat"; */
 }
 #app h2.title {
   font-size: 1.75rem;
